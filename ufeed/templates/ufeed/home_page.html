@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>unknown giving</title>
+</head>
+<link rel="stylesheet" href="{% static 'ufeed/home_page.css' %}">
+<link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+<body>
+    <div class="slide-container">
+        <div class="slide">
+            <img src="{% static 'ufeed/ann-tribe-children-myanmar-joxe-inazio-kuesta-garmendia.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'ufeed/kid-6268594__340.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'ufeed/loi-tribe-girl-myanmar-joxe-inazio-kuesta-garmendia.jpg' %}" alt="">
+        </div>
+        <div class="slide">
+            <img src="{% static 'ufeed/girl-2529907__480.jpg' %}" alt="">
+        </div>
+    </div>                                                                         -->
+    <span class="Arrow prev" onclick="controller(-1)">&#10094;</span>
+    <span class="Arrow next" onclick="controller(1)">&#10095;</span>
+    <div class="aboutus">
+        <h1>About Us</h1>
+        <p>Help us eradicate hunger in India
+
+            194 million people in India today do not have enough food to eat, the largest in any one country in the world. According to the Global Hunger Index 2021, India falls under the 'serious' hunger category with a rank of 101 among 116 countries.
+            
+            These statistics however, do not take into account the effects of COVID-19. The resultant migration, unemployment and loss of earning members of households has pushed millions of Indians into extreme poverty and hunger.</p>
+        <h2> Our Vision</h2>
+        <P>We believe providing meals to dependents in undeserved communities to reduce financial burden on NGO's and other organizations in short term, empowering them to become free from hunger in long term.</P>
+        <h2> Our Mission</h2>
+        <P>Our works are designed to provid essential food support to undeserved areas in the form of food.</P>
+        <h2> Our focus Area</h2>
+        <P>Our focused area is hunger, through our website we can help environment in two ways by reducing food wastage and degradation and providing this food to the undeserved people. Wo don't have a bite of food to eat.</P>
+    </div>
+   <script>
+       let index = 0 ;
+       function controller(x){
+             index = index + x
+             slideshow(index);
+       }
+       slideshow(index);
+       function slideshow(num){
+           let slides =document.getElementsByClassName("slide");
+           if (num==slides.length) {
+             num =0;
+             index =0;  
+           }
+           if (num<0) {
+             index = slides.length - 1;
+             num = slides.length - 1;
+           }
+           for(let y of slides){
+                y.style.display = "none";
+           }
+           slides[num].style.display = "block";
+       }
+   </script>
+</body>
+</html>
+{% endblock content %}

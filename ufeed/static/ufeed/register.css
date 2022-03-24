@@ -1,0 +1,111 @@
+
+body{
+    background-color: rgb(241 235 235);;
+}
+*{
+    margin: 0px;
+    padding: 0px;
+  }
+  *{
+      box-sizing: border-box;
+  }
+/* container */
+
+.container{
+    width: 44vw;
+    /* height: 500px; */
+    
+    margin: 85px auto;
+    background-color: white;
+    padding: 20px;
+}
+input[type=text],input[type=password],input[type=email]{
+    display: inline-block;
+    padding: 10px;
+    width: 100%;
+    margin: 7px 0px 22px 0px;
+   
+    
+}
+hr{
+    margin-bottom: 15px;
+    border: 1px solid #f1f1f1;
+
+}
+.registerbtn{
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+.registerbtn:hover{
+    opacity: 0.8;
+}
+p{
+  margin: 12px 0px;
+}
+.radio{
+    padding: 2px;
+    margin-bottom: 8px;
+}
+.radio label{
+    font-weight: bold;
+}
+
+#logo{
+    width: 10px;
+    height: 75px;
+}
+#logo img{
+    width: 63px;
+    border-radius: 82px;
+    height: 57px;
+    margin-top: 11px;
+}
+
+/* navigation bar */
+#navbar{
+  position: sticky;
+  display: flex;
+  align-items: center;
+  top: 0px;
+  background-color: #110202;
+}
+
+#navbar .sub-menu{
+  display: flex;
+  position: absolute;
+  right: 119px;
+  top: 2px;
+  
+  
+}
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: 'Baloo Bhai 2', cursive;
+  
+}
+#navbar ul li a{
+  display: block;
+  color: white;
+  padding: 18px 14px 17px 17px;
+  text-decoration: none;
+  background-color: black;
+}
+#navbar  ul ul  {
+  display: none;
+}
+#navbar ul :hover > ul {
+    display: block;
+ }
+#navbar ul li  :hover {
+  
+  color: rgb(143, 138, 138);
+  
+}
+

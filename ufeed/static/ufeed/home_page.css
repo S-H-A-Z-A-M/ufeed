@@ -1,0 +1,129 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.m-heading{
+    text-align: center;
+    font-size: 3.rem;
+}
+.s-heading{
+    text-align: center;
+    font-size: 2.rem;
+    font-weight: 600;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+
+/* container  */
+.slide-container{
+    position: absolute;
+    width: 100%;
+    margin-top:6px;
+    text-align: center;   
+   overflow: hidden;
+}
+
+.slide img{
+    width: 100%;
+    height: 100vh;
+    
+} 
+.Arrow{
+    cursor: pointer;
+    position: absolute;
+    top: 40%;
+    padding: 5px 17px;
+    color: black;
+    background-color: #f8f1f1;
+    font-size: 31px;
+    font-weight: bold;
+    border-radius: 50%;
+}
+.Arrow:hover{
+    background-color: #a1a0a0;
+}
+.next{
+    right: 0px;
+}
+.slide{
+    display: none;
+}
+/* Home */
+
+.aboutus h1{
+    font-size: 2rem;
+    text-align: center;
+    text-decoration: underline;
+    font-family: 'Baloo Bhai 2', cursive;
+}
+.aboutus{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    top: 750px;
+    /* border: 2px solid red; */
+    height: 20vh;
+    padding: 2px;
+}
+.aboutus p{
+    margin: 14px;
+    font-size: xx-large;
+}
+.aboutus h2{
+    font-size: 1.84em;
+    color: #23bec3;
+    text-align: center;
+    font-weight: bold;
+}
+#logo{
+    width: 10px;
+    height: 75px;
+}
+#logo img{
+    width: 63px;
+    border-radius: 82px;
+    height: 57px;
+    margin-top: 11px;
+}
+
+/* navigation bar */
+#navbar{
+  position: sticky;
+  display: flex;
+  align-items: center;
+  top: 0px;
+  background-color: #110202;
+}
+
+#navbar .sub-menu{
+  display: flex;
+  position: absolute;
+  right: 119px;
+  top: 2px;
+  
+  
+}
+#navbar ul li {
+  list-style: none;
+  font-size: 1.3rem;
+  text-align: center;
+  font-family: 'Baloo Bhai 2', cursive;
+  
+}
+#navbar ul li a{
+  display: block;
+  color: white;
+  padding: 18px 14px 17px 17px;
+  text-decoration: none;
+  background-color: black;
+}
+#navbar  ul ul  {
+  display: none;
+}
+#navbar ul li  :hover {
+  
+  color: rgb(143, 138, 138);
+  
+}
+#navbar .sub-menu:hover #dropdown  {
+    display: inline-block;
+}

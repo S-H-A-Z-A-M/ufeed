@@ -1,0 +1,40 @@
+
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-in</title>
+    <link rel="stylesheet" href="{% static 'ufeed/sign_in.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Akaya+Telivigala&family=Baloo+Bhai+2:wght@600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <form  method="POST">
+        {% csrf_token %}
+        <div class="mid-container">
+            <div class="imgcontainer">
+                <img src="{% static 'ufeed/avatar2.png' %}" alt="Avatar" class="avatar">
+              </div>
+            
+              <div class="container">
+                <label for="email"><b>Email</b></label>
+                <input type="email" placeholder="Enter Email" name="email" required autoFocus>
+            
+                <label for="password"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="password" required>
+            
+                <button type="submit">Login</button>
+              
+              </div>
+        </div>
+      
+        
+      </form>
+</body>
+</html>
+{% endblock content %}

@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<html>
+
+<head>
+    <style>
+        button:hover {
+            background-color: #fff;
+            color: #04AA6D;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 style="text-align: center; margin-top: 10px;">List Of Hotels</h1>
+    <form method="POST">
+        {% csrf_token %}
+        {% for student in data %}
+        <div class="container-fluid" style="display: flex; justify-content: center; margin-top: 15px;">
+            <div class="card" style="width: 25rem;">
+                <ul class="list-group list-group-flush">
+                    <li class="list-group-item"><b>Name : </b>{{student.name}}</li>
+                    <li class="list-group-item"><b>Contact :</b> {{student.contact}}</li>
+                    <li class="list-group-item"><b>Address :</b> {{student.address}}</li>
+                    <li class="list-group-item" id="id"><b>Amount :</b> {{student.amount}}</li>
+                    <a
+                            href="/ufeed/accept/{{student.id}}" style="text-decoration: none;color: #fff;text-align: center;background-color: #04AA6D;color: #fff;">Accept</a>
+                </ul>
+            </div>
+        </div>
+    </form>
+    <br>
+</body>
+
+</html>
+
+
+<script>
+
+    $(document).ready(function () {
+        $('button').click(function () {
+
+        });
+    });
+</script>
+{% endfor %}
+{% endblock content %}

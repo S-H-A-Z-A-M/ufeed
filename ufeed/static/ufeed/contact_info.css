@@ -1,0 +1,33 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+html,
+        body {
+            font-family: 'Lusitana', serif;
+        }
+
+.btn-primary {
+    color: #fff;
+    background-color: #04AA6D;
+}
+body{
+    background-color: gray;
+    background-image: url(opacity.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position : -1px ;
+}
+
+.container{
+    background-color: #ffffff9e;
+    padding: 20px;
+    width: 90vw;
+    margin:40px auto;
+}
+.btn-primary:hover{
+    background-color: #04AA6D;
+    opacity: 0.8;
+}
+
